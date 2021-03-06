@@ -1,0 +1,2 @@
+--FROM/WHERE 출력 로우에따라 rownum 증가
+SELECT * FROM(SELECT * FROM(SELECT rownum rnum, a.* FROM (SELECT * FROM EVALUATION ORDER BY POSTNUM desc) a )WHERE rnum <=10) WHERE rnum>=6 
